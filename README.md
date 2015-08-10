@@ -18,6 +18,8 @@ So you want to see an image, but don’t wanna leave your precious command-line?
 
 There is a better way!
 
+![biv](https://raw.githubusercontent.com/bogwonch/ruby-blocky-image-viewer/master/images/biv-cat.png)
+
 ![biv](https://raw.githubusercontent.com/bogwonch/ruby-blocky-image-viewer/master/images/biv.png)
 
 ## Features

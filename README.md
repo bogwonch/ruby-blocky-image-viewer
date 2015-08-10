@@ -2,7 +2,7 @@
 
 **tl;dr: terminal image displayer that’s a shameless re-write of [icat](https://github.com/atextor/icat) for Ruby**
 
-![tldr](https://raw.github.com/bogwonch/ruby-blocky-image-viewerl/images/tldr.png)
+![tldr](https://raw.githubusercontent.com/bogwonch/ruby-blocky-image-viewer/master/images/tldr.png)
 
 ## Summary
 
@@ -10,20 +10,21 @@ So you want to see an image, but don’t wanna leave your precious command-line?
 
 `jp2a` makes you sad...
 
-![jp2a](https://raw.github.com/bogwonch/ruby-blocky-image-viewerl/images/jp2a.png)
+![jp2a](https://raw.githubusercontent.com/bogwonch/ruby-blocky-image-viewer/master/images/jp2a.png)
 
 `img2txt` is just weird...
 
-![img2txt](https://raw.github.com/bogwonch/ruby-blocky-image-viewerl/images/img2txt.png)
+![img2txt](https://raw.githubusercontent.com/bogwonch/ruby-blocky-image-viewer/master/images/img2txt.png)
 
 There is a better way!
 
-![biv](https://raw.github.com/bogwonch/ruby-blocky-image-viewerl/images/biv.png)
+![biv](https://raw.githubusercontent.com/bogwonch/ruby-blocky-image-viewer/master/images/biv.png)
 
 ## Features
 
 * True color support!
 * Higher definition output (2 pixels per character!)
+* Standard definition output (1 pixel per character!)
 * Width and height controls!
 
 ## Installation

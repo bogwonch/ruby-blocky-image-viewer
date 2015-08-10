@@ -1,3 +1,39 @@
 #! /usr/bin/env ruby
 
 require 'biv'
+require 'terminfo'
+require 'trollop'
+
+opts = Trollop::options do
+  version "biv #{Biv::VERSION}"
+  banner <<-EOS
+Print images on the commandline.
+
+Usage:
+  biv [options] <filenames>+
+EOS
+
+  opt :width, 'Maximum image width', type: :integer, default: TermInfo.screen_size[1]
+  opt :height, 'Maximum image height', type: :integer
+  opt :fit, 'Fit entire image to terminal'
+  opt :true_color, 'True color'
+  opt :sd, 'Lower definition images'
+  opt :background, 'Background color of the image', type: :string, default: "FFFFFF"
+end
+
+bg = opts[:background].to_i(16)
+bg = [(bg && 0xFF0000) >> 16,
+      (bg && 0x00FF00) >> 8,
+      (bg && 0x0000FF)]
+
+opts[:height] = TermInfo.screen_size[0] if opts[:fit]
+
+ARGV.each do |arg|
+  puts Biv::Image.new(arg,
+                      width: opts[:width],
+                      height: opts[:height],
+                      true_color: opts[:true_color],
+                      hd: ! opts[:sd],
+                      bg: bg).to_s
+
+end

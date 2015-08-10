@@ -1,6 +1,30 @@
-# Ruby::Blocky::Image::Viewer
+# The Ruby Blocky Image Viewer
 
-TODO: Write a gem description
+**tl;dr: terminal image displayer that’s a shameless re-write of [icat](https://github.com/atextor/icat) for Ruby**
+
+![tldr](https://raw.github.com/bogwonch/ruby-blocky-image-viewerl/images/tldr.png)
+
+## Summary
+
+So you want to see an image, but don’t wanna leave your precious command-line?
+
+`jp2a` makes you sad...
+
+![jp2a](https://raw.github.com/bogwonch/ruby-blocky-image-viewerl/images/jp2a.png)
+
+`img2txt` is just weird...
+
+![img2txt](https://raw.github.com/bogwonch/ruby-blocky-image-viewerl/images/img2txt.png)
+
+There is a better way!
+
+![biv](https://raw.github.com/bogwonch/ruby-blocky-image-viewerl/images/biv.png)
+
+## Features
+
+* True color support!
+* Higher definition output (2 pixels per character!)
+* Width and height controls!
 
 ## Installation
 
@@ -12,15 +36,30 @@ gem 'ruby-blocky-image-viewer'
 
 And then execute:
 
-    $ bundle
+```sh
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install ruby-blocky-image-viewer
+```sh
+$ gem install ruby-blocky-image-viewer
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+If you just wanna view an image checkout:
+
+```sh
+$ biv --help
+```
+
+Otherwise have a look at the source code, especially `Biv::Viewer`:
+
+```ruby
+puts Biv::Viewer.new(“my-image.png”).to_s
+```
+
 
 ## Contributing
 
